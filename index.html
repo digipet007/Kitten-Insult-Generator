@@ -5,66 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- jQuery CDN -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-
+    
     <!-- Bootstrap CDN -->
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
     />
-
+    
+    
     <!-- Font Awesome CDN -->
     <script src="https://use.fontawesome.com/f8961987a2.js"></script>
-
+    
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Chilanka&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Chilanka&display=swap"
+    rel="stylesheet"
     />
-
+    
     <!-- Stylesheet Link -->
     <link rel="stylesheet" href="style.css" />
-
+    
     <title>Kitten Insults Right Meow</title>
   </head>
-
+  
   <body>
     <div class="container-fluid">
       <!-- Jumbotron -->
       <div class="jumbotron jumbotron-fluid rounded">
-        <div class="container">
-          <div class="row">
-            <div class="col-2"></div>
-            <div id="jumbotronText" class="col-6 sway">
-              <h1 class="display-4">Kitten Insults Right Meow</h1>
-              <p class="lead">Just kitten' around.</p>
-            </div>
-            <div class="col-4">
-              <img
-                id="#catbutt"
-                class="cat-animation sway"
-                src="images/IMG_2650.PNG"
-                alt="cat animation"
-              />
-            </div>
-          </div>
+        <div class="row">
+          <h1 class="mx-auto" id="title">Kitten Insults</h1>
+          <img
+          id="#catbutt"
+          class="mx-auto d-block img-fluid cat-animation sway"
+          src="images/IMG_2650.PNG"
+          alt="cat animation"
+          />
+        </div>
+        <div class="row">
+          <p>...Just kitten' around.</p>
         </div>
       </div>
-
+      
       <!-- Play Button -->
       <div id="btns" class="rounded">
         <button class="generate" id="generate">
-          <!-- <i class="fa fa-play-circle"></i> -->
-          Moar Insults!!
+          Elaborate
         </button>
-        <button id="restart">Mnew Insults!</button>
+        <button id="restart" class="newInsults">New Insult
+          <i class="fa fa-play-circle"></i>
+        </button>
         <br />
         <br />
         <!-- Insult Div, Sparated by Part of Speech -->
@@ -80,22 +71,39 @@
       <div class="text-center">
         <div id="placeKittenImg">
           <img
-            src="images/tiny-kitten-in-field.webp"
-            id="imgTest"
-            class="rounded"
+          src="images/tiny-kitten-in-field.webp"
+          id="imgTest"
+          class="rounded"
           />
         </div>
       </div>
     </div>
+    
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
 
+    <!-- Specific Firebase products we want (Database) -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+
+    
     <!-- Link to Anime.JS CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-
+    
     <!-- JS File Link -->
+    <script src="./main.js"></script>
     <script src="animations.js"></script>
     <script src="./random.js"></script>
     <script src="./random-kitten.js"></script>
-    <script src="./main.js"></script>
     <script src="./clear.js"></script>
   </body>
-</html>
+  </html>
+  
