@@ -1,44 +1,17 @@
-var duration = 250;
-var positions = [
-  {
-    x: "-=4vw",
-    y: "+=25"
-  },
-  {
-    x: "-=4vw",
-    y: "+=10"
-  },
-  {
-    x: "-=4vw",
-    y: "-=10"
-  },
-  {
-    x: "-=4vw",
-    y: "-=25"
-  },
-  {
-    x: "+=4vw",
-    y: "+=25"
-  },
-  {
-    x: "+=4vw",
-    y: "+=10"
-  },
-  {
-    x: "+=4vw",
-    y: "-=10"
-  },
-  {
-    x: "+=4vw",
-    y: "-=25"
-  },
-];
+$(document).ready(function() {
+  var cat = anime({
+    targets: ".sway",
+    translateY: [
+      { value: 150, duration: 500 },
+      { value: 0, duration: 500 }
+    ],
+    rotate: {
+      value: "1turn",
+      easing: "easeInOutSine"
+    },
+    autoplay: false,
+    loop: false
+  });
 
-var catAnimation = anime({
-  targets: ".sway",
-  easing: "linear",
-  loop: true,
-  autoplay: true,
-  translateX: positions.map(p => ({value: p.x, duration})),
-  translateY: positions.map(p => ({value: p.y, duration})),
+  document.querySelector(".newInsults").onclick = cat.play;
 });
