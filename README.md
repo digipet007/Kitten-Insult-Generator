@@ -3,7 +3,7 @@
 Kitten Insults generates a random sentence made up of two adjectives and a random noun, situated above a randomly generated picture of a cat.
 Our team used three different APIs for this: Words API, the Merriam-Webster Dictionary API, and The Cat API.
 
-![kitten insult demo](demo/kittninsult2.gif)
+![kitten insult demo](demo/kittninsult4.gif)
 
 For a demo of the app, visit: <https://digipet007.github.io/Kitten-Insult-Generator/>
 
