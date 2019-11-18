@@ -13,6 +13,7 @@ For a demo of the app, visit: <https://digipet007.github.io/Kitten-Insult-Genera
 - Anime.js
 - Bootstrap CSS
 - Google Firebase (for monitoring purposes)
+- Moment.js
 
 ### API Calls
 - Words API
