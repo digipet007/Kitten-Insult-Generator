@@ -107,13 +107,7 @@ function randomWords() {
 
 // On click event updates clickcounter in database, and generates random words
 $("#generate").on("click", function() {
-  if (!goAheadAndAjax) {
-    console.log("too many click counts!!");
-    return false;
-  }
-  if (goAheadAndAjax) {
-    randomWords();
-  }
+  randomWords();
 });
 
 //update the database with the number of ajax calls
