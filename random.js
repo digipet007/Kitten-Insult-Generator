@@ -16,10 +16,17 @@ randomList = [
   "rotten"
 ];
 
+randomIntro = ["I've never seen such ", "What ", "You are ", "You... "];
+
 var rand;
+var intro;
 
 function randomQuery() {
   return randomList[Math.floor(Math.random() * randomList.length)];
+}
+
+function randomIntroduction() {
+  return randomIntro[Math.floor(Math.random() * randomIntro.length)];
 }
 
 function similarWord() {
@@ -35,19 +42,29 @@ function similarWord() {
     method: "GET"
   }).then(function(response) {
     console.log(response);
+    //create a randomized insult introduction and append it to the html page
+    intro = randomIntroduction();
+    console.log(intro);
     var random = Math.floor(Math.random() * response[0].meta.syns[0].length);
     rand = response[0].meta.syns[0][random];
     if (
-      rand[0] === "a" ||
-      rand[0] === "i" ||
-      rand[0] === "e" ||
-      rand[0] === "o" ||
-      rand[0] === "u"
+      intro === "I've never seen such " ||
+      intro === "What " ||
+      intro === "You are "
     ) {
-      $("#youAreA").text("You are an");
-    } else {
-      $("#youAreA").text("You are a");
+      if (
+        rand[0] === "a" ||
+        rand[0] === "i" ||
+        rand[0] === "e" ||
+        rand[0] === "o" ||
+        rand[0] === "u"
+      ) {
+        intro += "an";
+      } else {
+        intro += "a";
+      }
     }
+    $("#youAreA").text(intro);
     $("#adjective-1").prepend(" " + rand);
   });
 }
