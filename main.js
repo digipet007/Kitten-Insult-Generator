@@ -121,23 +121,26 @@ function updateDatabase() {
   clickCounter++;
   console.log("click counter from browser:" + clickCounter);
   // // Save new value to Firebase
-  database
-    .ref()
-    .update({
-      clickcount: clickCounter
-    })
-    .then(function() {
-      console.log("Synchronization succeeded");
-      console.log(clickCounter);
-    })
-    .catch(function(error) {
-      console.log("Synchronization failed");
-    });
+  if (timeDiff < 1440) {
+    database
+      .ref()
+      .update({
+        clickcount: clickCounter
+      })
+      .then(function() {
+        console.log("Synchronization succeeded");
+        console.log(clickCounter);
+      })
+      .catch(function(error) {
+        console.log("Synchronization failed");
+      });
+  }
 
   if (timeDiff >= 1440) {
     database
       .ref()
       .update({
+        clickcount: clickCounter,
         timestamp: firebase.database.ServerValue.TIMESTAMP
       })
       .then(function() {
