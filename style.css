@@ -58,3 +58,34 @@ body {
 .generate {
   margin-right: 15px;
 }
+
+@media only screen and (min-width: 641px) and (max-width: 1069px){
+  .jumbotron {
+    padding: 3% 5% 0% 19%;
+  }
+  .cat-animation {
+    top: 0px;
+    width: 7em;
+    height: 7.25em;
+  }
+  #title {
+    font-size:8vw;
+    margin: 0%;
+    padding: 0%;
+  }
+}
+@media only screen and (min-width: 1070px) {
+  .jumbotron {
+    padding: 3% 5% 0% 19%;
+  }
+  .cat-animation {
+    top: 0px;
+    width: 7em;
+    height: 7.25em;
+  }
+  #title {
+    font-size:7vw;
+    margin: 0%;
+    padding: 0%;
+  }
+}
